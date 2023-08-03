@@ -84,16 +84,41 @@ let newvalues2 = values2.map((value2) => {
 console.log(newvalues2);
 
 // Exo 7
-let studentCoursesA = ["Math", "English", "Programming"];
-let studentCoursesB = ["Geography", "Spanish", "Programming"];
-function isEqual(studentCoursesA, studentCoursesB) {
-  if (studentCoursesA.length !== studentCoursesB.length) return false;
-
-  return studentCoursesA.every(
-    (studentCoursesA, index) => studentCoursesA === studentCoursesB[index]
-  );
-}
-
-let resultat = isEqual(studentCoursesA, studentCoursesB);
-
+let studentACourses = ["Math", "English", "Programming"];
+let studentBCourses = ["Geography", "Spanish", "Programming"];
+let resultat = studentACourses.filter((word) => studentBCourses.includes(word));
 console.log(resultat);
+
+// Resume du cours sur les variables
+// Variables & types de variables
+
+// let // Variable portée limitée et qui est réassignable.
+// const // Vraible constante à portée limité mais qui n'est pas réassignable.
+
+//const lastname = "Ielli"; // Non réassignable.
+//let age = 30; // Réassignable.
+
+//const firstname = "Lucas"; // Portée globale.
+let javaScriptCoach = "Lucas"; // Portée globale.
+
+const catName = "Lucky"; // Type > String = chaine de caractère = ""; Valeur : Lucky
+console.log(catName);
+let catAge = 4; // Type > Number = nombre = 0; Valeur : 4
+console.log(catAge);
+let vraiOuFaux = true; // Type > Boolean = Booléen = true ou false; Valeur : true
+console.log(vraiOuFaux);
+const planets = ["Uranus", "Venus"]; // Type de la variable > Tableau = Array = [] // Valeurs reprises dans notre tableau sont toutes les deux des Strings.
+console.log(planets); // (2)['Uranus', 'Venus']
+console.log(planets[0]); // Uranus // Faire le choix entre [] de l'indice permet d'afficher la valeur de cet indice.
+
+const voiture = {
+  marque: "Toyota",
+  modele: "Yaris",
+  annee: 1999,
+}; // Type de la variable voiture > Objet = Object = {} // Cet objet possède 3 propriété qui sont : la marque, le modele, l'année. // Les valeurs des deux propriétés marque et modele sont des Strings : Toyota, Yaris. Et l'année est un type Nombre.
+console.log(voiture); // {marque: 'Toyota', modele: 'Yaris', annee: 1999}
+console.log(voiture.marque); // 'Toyota'
+console.log(voiture.modele); // 'Yaris'
+console.log(voiture.annee); // 1999
+
+// SOLUTIONS AUX EXERCICES
